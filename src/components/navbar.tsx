@@ -9,14 +9,15 @@ const Navbar = () => {
         </div>
         <div className="nav-elements">
           <ul>
-            <li>
-              <NavLink to="/">Sarah Peng</NavLink>
+             <li>
+              <NavLink to="calendar">Upcoming</NavLink>
             </li>
             <li>
               <NavLink to="/taskTracker">Task Tracker</NavLink>
             </li>
+           
             <li>
-              <NavLink to="calendar">Upcoming</NavLink>
+              <NavLink to="/">Sarah Peng</NavLink>
             </li>
          
           </ul>

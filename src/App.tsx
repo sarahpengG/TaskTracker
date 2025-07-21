@@ -1,10 +1,9 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Home from './pages/home';
-import Calendar from './pages/calendar';
-import TaskTracker from './pages/taskTracker';
-
+import Home from "./pages/home";
+import Calendar from "./pages/calendar";
+import TaskTracker from "./pages/taskTracker";
 
 function App() {
   return (
@@ -12,9 +11,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Add more routes like below as needed */}
-        {/* <Route path="/taskTracker" element={<TaskTracker />} /> */}
-        {/* <Route path="/calendar" element={<Calendar />} /> */}
+        <Route path="/taskTracker" element={<TaskTracker />} />
+        <Route path="/calendar" element={<Calendar />} />
       </Routes>
     </Router>
   );
