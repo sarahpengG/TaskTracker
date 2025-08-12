@@ -1,4 +1,11 @@
+import "../index.css";
+
+import TaskWrapper from "../components/taskWrapper";
 const TaskTracker = () => {
-  return <h1>Welcome to the Home Page!</h1>;
-}
-export default TaskTracker
+  return (
+    <>
+      <TaskWrapper />
+    </>
+  );
+};
+export default TaskTracker;

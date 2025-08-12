@@ -1,14 +1,26 @@
-navbar {
-  position: fixed;
-  z-index: 1;
+#root {
+  max-width: 1280px;
+  margin: 5 auto;
+  padding: 2rem;
+  text-align: center;
+}
 
+/*navigation*/
+
+.navbar {
+  width: 100vw;
+  height: 40px;
+  position: fixed;
+  /* Here, we use fixed positioning so that our nav bar always stays on top of the page */
+  z-index: 1;
 }
 
 ul {
+
   list-style: none;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-top: 10vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
   font-size: large;
 }
 
@@ -21,5 +33,90 @@ li {
 li:last-child {
   float: left;
   /* make sure that the home page link is on the left of the page, not the right */
-  margin-left: 0px;
+  margin-left: 5px;
+}
+
+/* Home page*/
+.title {
+  padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5em;
+  font-size: 5em;
+
+}
+
+.intro {
+  line-height: 1.6;
+  font-size: 1.3em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30em;
+
+
+}
+
+/* task tracker*/
+
+
+
+
+.TaskWrap {
+  margin-top: 15rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.TaskForm {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.taskListText{
+  outline: none;
+  background: none;
+  border: 1px solid #8758ff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #000000;
+}
+
+.taskListText::placeholder {
+  color: #381a1a4d;
+} 
+
+.taskListBtn {
+ 
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #8758ff;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+} 
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
 }
