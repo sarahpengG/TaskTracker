@@ -2,6 +2,7 @@ import { useState } from "react";
 import TaskForm from "./TaskForm";
 import { v4 as uuidv4 } from "uuid";
 import Todo from "./Todo";
+import EditTaskForm from "./EditTodoForm";
 
 export const TaskWrapper = () => {
   interface todo {
@@ -41,10 +42,13 @@ export const TaskWrapper = () => {
     <div className="TaskWrap">
       <h1>Let's Be Productive!</h1>
       <TaskForm addTodo={addTodo} />
-      {todos.map((todo, index) => (
+       {todos.map((todo) =>
+        todo.isEditing ? (
+          <EditTaskForm editTodo={editTodo} flask={todo} />
+        ) : (
         <Todo
           flask={todo}
-          key={index}
+          key={todo.id}
           toggleComplete={toggleComplete}
           deleteTodo={deleteTodo}
           editTodo={editTodo}
