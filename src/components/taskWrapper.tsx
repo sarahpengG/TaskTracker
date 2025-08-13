@@ -38,22 +38,30 @@ export const TaskWrapper = () => {
       )
     );
   };
+  const editTask = (task: any, id: string) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo
+      )
+    );
+  };
   return (
     <div className="TaskWrap">
       <h1>Let's Be Productive!</h1>
       <TaskForm addTodo={addTodo} />
-       {todos.map((todo) =>
+      {todos.map((todo) =>
         todo.isEditing ? (
-          <EditTaskForm editTodo={editTodo} flask={todo} />
+          <EditTaskForm editTodo={editTask} flask={todo} />
         ) : (
-        <Todo
-          flask={todo}
-          key={todo.id}
-          toggleComplete={toggleComplete}
-          deleteTodo={deleteTodo}
-          editTodo={editTodo}
-        />
-      ))}
+          <Todo
+            flask={todo}
+            key={todo.id}
+            toggleComplete={toggleComplete}
+            deleteTodo={deleteTodo}
+            editTodo={editTodo}
+          />
+        )
+      )}
     </div>
   );
 };
