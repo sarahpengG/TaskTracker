@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 interface TodoType {
   id: string;
@@ -9,7 +10,6 @@ interface TodoType {
   isEditing: boolean;
 }
 
-
 interface TodoProps {
   flask: TodoType;
   toggleComplete: (id: string) => void;
@@ -17,6 +17,7 @@ interface TodoProps {
   editTodo: (id: any) => void;
 }
 const Todo = ({ flask, toggleComplete, deleteTodo, editTodo }: TodoProps) => {
+  const [urgency, setUrgency] = useState("Medium");
   return (
     <div className="Todo">
       <p
@@ -25,10 +26,21 @@ const Todo = ({ flask, toggleComplete, deleteTodo, editTodo }: TodoProps) => {
       >
         {flask.task}
       </p>
-      <div>
-        <FontAwesomeIcon icon={faPenToSquare} onClick={() => editTodo(flask.id)}/>
-        <FontAwesomeIcon icon={faTrash}  onClick={() =>deleteTodo(flask.id)}/>
+      <div className=" icon">
+        <FontAwesomeIcon
+          icon={faPenToSquare}
+          onClick={() => editTodo(flask.id)}
+        />
+        <FontAwesomeIcon icon={faTrash}  onClick={() => deleteTodo(flask.id)} />
       </div>
+
+      {
+        <select className="urg" value={urgency} onChange={(e) => setUrgency(e.target.value)}>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+      }
     </div>
   );
 };

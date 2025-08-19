@@ -1,7 +1,7 @@
 const Calendar = () => {
   return (
     <> 
-    <p> upc oming acalendar
+    {/* <p> upc oming acalendar
         tasks
         task tracker 
         make shit look normal
@@ -11,7 +11,7 @@ const Calendar = () => {
         backgrouynd stuff
         way later:
         moving elements
-    </p>
+    </p> */}
     </>
   )
 }

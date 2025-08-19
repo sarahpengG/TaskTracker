@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 5 auto;
@@ -8,6 +10,8 @@
 /*navigation*/
 
 .navbar {
+  color: #264653;
+  font-family: sans-serif;
   width: 100vw;
   height: 40px;
   position: fixed;
@@ -15,11 +19,19 @@
   z-index: 1;
 }
 
-ul {
+a:visited {
+  text-decoration: none;
+  color: #264653;
+}
 
+.navbar :hover {
+  color: #2a9d8f;
+}
+
+ul {
   list-style: none;
   margin-top: 10vh;
-  margin-left: 5vw;
+  margin-left: 0vw;
   margin-right: 5vw;
   font-size: large;
 }
@@ -27,7 +39,7 @@ ul {
 li {
   /* make sure that the home page link is on the left of the page, not the right */
   float: right;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 li:last-child {
@@ -36,29 +48,61 @@ li:last-child {
   margin-left: 5px;
 }
 
+
 /* Home page*/
+/* index.css */
+.home {
+
+  background-image: url('../public/assets/3267.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  margin: -40px -50px -50px -50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+ padding:4rem;
+
+}
+
 .title {
+ text-align: center;
+  color: #264653;
+  font-family: 'Cherry Bomb One';
+  font-size: clamp(2rem, 6vw, 6rem);
   padding-top: 200px;
   margin-left: auto;
   margin-right: auto;
-  width: 5em;
-  font-size: 5em;
+ 
 
 }
 
 .intro {
+  
+  text-align: center;
+  color: #264653;
+  font-family: sans-serif;
   line-height: 1.6;
-  font-size: 1.3em;
+
   margin-left: auto;
   margin-right: auto;
-  width: 30em;
+   font-size: clamp(1rem, 2vw, 1.3rem);
+  max-width: 40rem; 
 
 
 }
 
 /* task tracker*/
 
-
+.tt {
+  color: #e76f51;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 .TaskWrap {
@@ -72,38 +116,54 @@ li:last-child {
   margin-bottom: 1rem;
 }
 
-.taskListText{
+.taskListText {
+
   outline: none;
   background: none;
-  border: 1px solid #8758ff;
+  border: 1px solid #e76f51;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
   width: 300px;
-  color: #000000;
+  color: #e9c46a;
 }
 
+.taskList {
+  gap: 1rem;
+  align-items: center;
+}
+
+
 .taskListText::placeholder {
-  color: #381a1a4d;
-} 
+  color: #e9c46a;
+}
 
 .taskListBtn {
- 
-  border: none;
+ background: #f4a261;
+  color: #ffffff;
+  border: #e76f51;
   padding: 0.55rem;
   cursor: pointer;
+}
+.urg{
+
+color: #e76f51;
+
+}
+.icon {
+  margin-left: auto;
 }
 
 .Todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #8758ff;
+  background: #e76f51;
   color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
-} 
+}
 
 .incompleted {
   color: #fff;
@@ -111,7 +171,7 @@ li:last-child {
 }
 
 .completed {
-  color: #c5aeff;
+  color: #e9c46a;
   text-decoration: line-through;
   cursor: pointer;
 }

@@ -3,6 +3,7 @@ import '../index.css'
 const Home = () => {
   return (
     <>
+     <div className="home">
       <h1 className="title">Welcome!</h1>
       <p className="intro">
         I’m Sarah Peng, a sophomore at the University of Minnesota, majoring in Computer
@@ -11,6 +12,7 @@ const Home = () => {
         it’s coding, sketching, or shaping 3D objects, I’m always excited to
         learn and create.
       </p>
+      </div>
     </>
   );
 };

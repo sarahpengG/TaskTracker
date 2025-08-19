@@ -4,7 +4,9 @@ import TaskWrapper from "../components/taskWrapper";
 const TaskTracker = () => {
   return (
     <>
+    <div className="tt">
       <TaskWrapper />
+      </div>
     </>
   );
 };
