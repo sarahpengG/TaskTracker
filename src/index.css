@@ -1,68 +1,182 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#root {
+  max-width: 1280px;
+  margin: 5 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/*navigation*/
+
+.navbar {
+  color: #264653;
+  font-family: sans-serif;
+  width: 100vw;
+  height: 40px;
+  position: fixed;
+  /* Here, we use fixed positioning so that our nav bar always stays on top of the page */
+  z-index: 1;
 }
 
-body {
-  margin: 0;
+a:visited {
+  text-decoration: none;
+  color: #264653;
+}
+
+.navbar :hover {
+  color: #2a9d8f;
+}
+
+ul {
+  list-style: none;
+  margin-top: 10vh;
+  margin-left: 0vw;
+  margin-right: 5vw;
+  font-size: large;
+}
+
+li {
+  /* make sure that the home page link is on the left of the page, not the right */
+  float: right;
+  margin-right: 25px;
+}
+
+li:last-child {
+  float: left;
+  /* make sure that the home page link is on the left of the page, not the right */
+  margin-left: 5px;
+}
+
+
+/* Home page*/
+/* index.css */
+.home {
+
+  background-image: url('../public/assets/3267.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  margin: -40px -50px -50px -50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+ padding:4rem;
+
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.title {
+ text-align: center;
+  color: #264653;
+  font-family: 'Cherry Bomb One';
+  font-size: clamp(2rem, 6vw, 6rem);
+  padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.intro {
+  
+  text-align: center;
+  color: #264653;
+  font-family: sans-serif;
+  line-height: 1.6;
+
+  margin-left: auto;
+  margin-right: auto;
+   font-size: clamp(1rem, 2vw, 1.3rem);
+  max-width: 40rem; 
+
+
+}
+
+/* task tracker*/
+
+.tt {
+  color: #e76f51;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.TaskWrap {
+  margin-top: 15rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.TaskForm {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.taskListText {
+
+  outline: none;
+  background: none;
+  border: 1px solid #e76f51;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #e9c46a;
+}
+
+.taskList {
+  gap: 1rem;
+  align-items: center;
+}
+
+
+.taskListText::placeholder {
+  color: #e9c46a;
+}
+
+.taskListBtn {
+ background: #f4a261;
+  color: #ffffff;
+  border: #e76f51;
+  padding: 0.55rem;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.urg{
+
+color: #e76f51;
+
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.icon {
+  margin-left: auto;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e76f51;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  color: #e9c46a;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
 }

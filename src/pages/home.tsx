@@ -1,0 +1,19 @@
+import '../index.css'
+
+const Home = () => {
+  return (
+    <>
+     <div className="home">
+      <h1 className="title">Welcome!</h1>
+      <p className="intro">
+        I’m Sarah Peng, a sophomore at the University of Minnesota, majoring in Computer
+        Science and minoring in UX Design. In my free time, I enjoy drawing and
+        painting, and I’m currently learning 3D modeling and animation. Whether
+        it’s coding, sketching, or shaping 3D objects, I’m always excited to
+        learn and create.
+      </p>
+      </div>
+    </>
+  );
+};
+export default Home;
