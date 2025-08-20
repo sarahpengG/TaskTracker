@@ -5,11 +5,11 @@
 A simple application to manage tasks.
 
 
-## Project Screen Shot(s)
+## Project Screen Shots
 
-/public\assets\Screenshot 2025-08-19 141326.png
-/public\assets\Screenshot 2025-08-19 141343.png
-/public\assets\Screenshot 2025-08-19 141351.png
+(public\assets\Screenshot 2025-08-19 141326.png)
+(public\assets\Screenshot 2025-08-19 141343.png)
+(public\assets\Screenshot 2025-08-19 141351.png)
 
 ## Installation and Setup Instructions
 
