@@ -5,7 +5,7 @@
 A simple application to manage tasks.
 
 
-## Project Screen Shot(s)
+## Project Screen Shots
 
 (public\assets\Screenshot 2025-08-19 141326.png)
 (public\assets\Screenshot 2025-08-19 141343.png)
