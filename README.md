@@ -7,9 +7,10 @@ A simple application to manage tasks.
 
 ## Project Screen Shots
 
-![Screenshot](public\assets\Screenshot 2025-08-19 141326.png)
-![Screenshot](public\assets\Screenshot 2025-08-19 141343.png)
-![Screenshot](public\assets\Screenshot 2025-08-19 141351.png)
+![Screenshot](public/assets/Screenshot%202025-08-19%20141326.png)
+![Screenshot](public/assets/Screenshot%202025-08-19%20141343.png)
+![Screenshot](public/assets/Screenshot%202025-08-19%20141351.png)
+
 
 ## Installation and Setup Instructions
 
