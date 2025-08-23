@@ -20,11 +20,12 @@ Clone down this repository. You will need `node` and `npm` installed globally on
 
 Installation:
 
-`npm install`  
+`git clone https://github.com/sarahpengG/TaskTracker.git` 
+`cd TaskTracker` 
 
 To Run Test Suite:  
 
-`npm test`  
+`npm install`  
 
 To Start Server:
 
